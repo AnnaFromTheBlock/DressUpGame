@@ -8,6 +8,22 @@ public class HatSpawner : MonoBehaviour
     private int rand;
     public Sprite[] Sprite_Pic;
 
+    public int counter = 0;
+
+    public void OnItemClicked()
+    {
+        counter++;
+        if (counter % 2 == 1)
+        {
+            GetComponent<SpriteRenderer>().sprite = Sprite_Pic[rand];
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = Sprite_Pic[1];
+        }
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +33,7 @@ public class HatSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GetComponent<SpriteRenderer>().sprite = Sprite_Pic[rand];
-        }
+
     }
 
 
