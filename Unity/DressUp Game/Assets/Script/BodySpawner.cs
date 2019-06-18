@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HatSpawner : MonoBehaviour
+public class BodySpawner : MonoBehaviour
 {
+
     private int rand;
     public Sprite[] Sprite_Pic;
 
@@ -12,36 +13,19 @@ public class HatSpawner : MonoBehaviour
 
     public void OnItemClicked()
     {
-        //counter++;
-        //if (counter % 2 == 1)
-        //{
-        //    GetComponent<SpriteRenderer>().sprite = Sprite_Pic[rand];
-        //}
-
-        //if (counter % 3 == 2)
-        //{
-        //    GetComponent<SpriteRenderer>().sprite = Sprite_Pic[1];
-        //}
-        //if (counter % 5 == 3)
-        //{
-        //    GetComponent<SpriteRenderer>().sprite = Sprite_Pic[rand+2];
-        //}
 
         GetComponent<SpriteRenderer>().sprite = Sprite_Pic[(++rand) % Sprite_Pic.Length];
-        
-    }
 
+    }
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
-
-
 }
