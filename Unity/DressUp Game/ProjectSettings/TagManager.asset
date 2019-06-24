@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Wolk
+    uniqueID: 1440605743
+    locked: 0
+  - name: BG
+    uniqueID: 1436043947
+    locked: 0
+  - name: wings
+    uniqueID: 1854561869
+    locked: 0
   - name: Base
     uniqueID: 3956841067
     locked: 0

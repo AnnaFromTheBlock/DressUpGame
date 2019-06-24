@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HatSpawner : MonoBehaviour
 {
-    private int rand;
+    public int rand;
     public Sprite[] Sprite_Pic;
 
     public int counter = 0;
@@ -28,7 +28,10 @@ public class HatSpawner : MonoBehaviour
         //}
 
         GetComponent<SpriteRenderer>().sprite = Sprite_Pic[(++rand) % Sprite_Pic.Length];
-        
+        if (rand == 5)
+        {
+            rand = 0;
+        }
     }
 
     // Start is called before the first frame update

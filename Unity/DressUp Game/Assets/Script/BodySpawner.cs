@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BodySpawner : MonoBehaviour
 {
 
-    private int rand;
+    public int band;
     public Sprite[] Sprite_Pic;
 
     public int counter = 0;
@@ -14,8 +14,11 @@ public class BodySpawner : MonoBehaviour
     public void OnItemClicked()
     {
 
-        GetComponent<SpriteRenderer>().sprite = Sprite_Pic[(++rand) % Sprite_Pic.Length];
-
+        GetComponent<SpriteRenderer>().sprite = Sprite_Pic[(++band) % Sprite_Pic.Length];
+        if (band == 5)
+        {
+            band = 0;
+        }
     }
     // Start is called before the first frame update
     void Start()
